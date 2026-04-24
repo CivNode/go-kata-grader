@@ -1,0 +1,10 @@
+{
+  "passedTests": true,
+  "concurrencySafe": true,
+  "patternMatches": {
+    "uses-context-with-timeout": true,
+    "binds-cancel": true
+  },
+  "forbiddenHits": [],
+  "overallAtLeast": 85
+}

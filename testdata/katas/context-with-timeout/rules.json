@@ -1,0 +1,21 @@
+{
+  "required": [
+    {
+      "id": "uses-context-with-timeout",
+      "astShape": "call(\"context.WithTimeout\", args=[_, _])",
+      "message": "use context.WithTimeout to derive the deadline-bounded context"
+    },
+    {
+      "id": "binds-cancel",
+      "astShape": "assign(lhs=[named, named], rhs=[call(\"context.WithTimeout\", args=[_, _])])",
+      "message": "capture both values from context.WithTimeout: ctx, cancel := ..."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "no-time-sleep-coordination",
+      "astShape": "call(\"time.Sleep\", args=[_])",
+      "message": "do not coordinate with time.Sleep; use the returned context.Done channel"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "passedTests": true,
+  "concurrencySafe": true,
+  "patternMatches": {
+    "uses-context-with-timeout": true,
+    "binds-cancel": false
+  },
+  "forbiddenHits": [],
+  "expectedNoteSubstring": "binds-cancel",
+  "overallAtMost": 90
+}
